@@ -6,7 +6,9 @@ a,ul,li{
 	color: black;
 	font-size: 30px;
 }
-
+body{
+	background-color: #8e8e8e;
+}
 a:hover{
 	color: red;
 }
