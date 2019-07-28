@@ -1,6 +1,6 @@
 a,ul,li{
-	margin: 0;
-	padding: 0; 
+	/* margin: 0;
+	padding: 0;  */
 	list-style: none;
 	text-decoration: none;
 	color: black;
@@ -8,6 +8,7 @@ a,ul,li{
 }
 body{
 	background-color: #8e8e8e;
+	font-family: 楷体;
 }
 a:hover{
 	color: red;
@@ -31,4 +32,28 @@ ul ul li a{
 .content p{
 	text-align: center;
 	font-size: 20px;
+}
+
+.list{
+	
+	width: 150px;
+	position: fixed;
+	left: 40px;
+	top:200px;
+	border-top:4px dotted white;
+	border-right:4px dotted white;
+}
+
+.list ul{
+	margin: 0;
+	padding: 5px;
+}
+
+.list ul a{
+	font-size: 18px;
+	color: white;
+}
+
+.list ul a:hover{
+	color: red;
 }
