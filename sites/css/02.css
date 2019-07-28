@@ -1,0 +1,13 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.q1{
+	background-color: pink;
+	width: 400px;
+	height: 400px;
+	padding: 100px;
+	box-sizing: border-box;
+}
