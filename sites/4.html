@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.q1{
+			overflow: hidden;
+			border:1px solid red;
+			margin-bottom: 20px;
+		}
+		.q2{
+			width: 100px;
+			height: 100px;
+			background-color:red;
+			float: left;
+		}
+		.q3{
+			width: 200px;
+			height: 200px;
+			background-color:yellow;
+			float: left;
+		}
+		.q4{
+			overflow: auto;
+			border:1px solid red;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="q1">
+		<div class="q2"></div>
+		<div class="q3"><img src="img/1.png" height="636" width="1067" alt=""></div>我这张图片高636px，爷元素用了overflow: hidden，隐藏了我超出父元素的部分图像区域</br>
+		超出则隐藏
+	</div>
+
+	<div class="q4">
+		<div class="q2"></div>
+		<div class="q3"><img src="img/1.png" height="636" width="1067" alt=""></div>我这张图片高636px，爷元素用了overflow: auto，不会隐藏我超出父元素的部分图像区域，而是保留下来，生成滚动条
+		</br>
+		超出则有滚动条
+	</div>
+</body>
+</html>
