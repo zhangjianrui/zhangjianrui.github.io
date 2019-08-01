@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网址生成</title>
+		<style>
+		*{
+			font-size: 20px;
+		}
+			a{
+				text-decoration: none;
+				color: red;
+			}
+			.main{
+				width: 1200px;
+				margin: 0 auto;
+			}
+			div{
+				margin: 60px 0 60px;
+			}
+		</style>		
+	</head>
+	<body>
+		<div class="main">
+			<input type="text" size="60" class="site">
+			<input type="button" value="生成地址" id="q1">
+			<div>
+				<span>pc端:</span>
+				<a href="" target="_blank">
+					pc端清缓存
+				</a>
+			</div>
+			<div class="m">
+				<span>m端:</span>
+				<input type="text" value="" size="60">
+				<a href="" target="_blank">m端清缓存</a>
+			</div>
+			<div class="mip">
+				<span>mip端:</span>
+				<input type="text" value="" size="60">
+				<a href="" target="_blank">mip端清缓存</a>
+			</div>
+			
+		</div>
+			
+	</body>
+	<script src="lib/jquery-1.12.4.js"></script>
+	<script>
+	$(function() {
+	$("#q1").click(function() {
+		var a = $("input").val()
+		var pcSite = a + '.html';
+		var mSite = pcSite.replace(/www/g, 'm')
+		var mipSite = pcSite.replace(/www/g, 'mip')
+		$("a").attr('href', pcSite);
+		$(".m a").attr('href', mSite);
+		$(".mip a").attr('href', mipSite);
+		$(".m input").attr('value', mSite)
+		$(".mip input").attr('value', mipSite)
+		$(".main .site").val("");
+
+
+
+	});
+})</script>
+</html>
