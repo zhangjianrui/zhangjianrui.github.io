@@ -57,3 +57,8 @@ ul ul li a{
 .list ul a:hover{
 	color: red;
 }
+
+.catalog ul ul li{
+	color: yellow;
+	font-size: 25px;
+}
