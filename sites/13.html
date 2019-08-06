@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>test.html</title>
+
+</head>
+<body>
+姓名<br>
+<input type="text" id="q1">
+<input type="button" value="触发" id="q2">
+
+<input type="button" value="提交"><!-- onclick代表单击以后会触发的事件 -->
+
+<a href="1.html" target="_self">123</a>
+<input type="text" id="q3">
+</body>
+<!-- <script src="lib/jquery-1.12.4.js"></script> -->
+<script>
+var str = "https://www.chinapp.com/pinpaidongtai/185748?show=73a2fcc2efb5209c7989d4386cfb44d9";
+
+a=str.length
+c=str.replace(str.substr(a-38,a+1),".html");
+alert(c)
+
+// b=str.substr(a-38,a+1)
+// c=str.replace(b,".html");
+// alert(c)
+</script>
+</html>
+
