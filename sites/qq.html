@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="事件1" id="q1">
+	<a href="http://www.baidu.com" id="q2">事件2</a>
+
+</body>
+<script src="lib/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+
+$("#q1").click(function() {
+	alert("事件1")
+});
+
+		$("#q2").click(function() {
+			$("#q1").trigger('click');
+			alert("事件2")
+		});
+
+
+		
+	})
+</script>
+</html>

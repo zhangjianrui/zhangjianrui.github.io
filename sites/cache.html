@@ -43,9 +43,9 @@
 			<div class="pc">
 				<span>pc端:</span>
 				<input type="text" value="" size="60">
-				<a href="" target="_blank" accesskey="2">
+				<a href="javascript:volid(0);" target="_blank" accesskey="2">
 					新页面访问(按Alt+2 访问)
-					
+					</a>
 					<div class="m">
 						<span>m端地址:</span>
 						<input type="text" value="" size="60">
@@ -57,10 +57,13 @@
 						<span>mip端地址:</span>
 						<input type="text" value="" size="59">
 						
-						<a href="javascript:volid(0);" target="_self" accesskey="4" title="再生成一次链接才可访问">当前页面访问(按Alt+4 访问)</a>
+						<a href="javascript:volid(0);" target="_self" accesskey="4" class="ddd">当前页面访问(按Alt+4 访问)</a>
 					</div>
 					
 				</div>
+		
+
+
 				<div class="main">
 					<span>正式站链接:</span>
 					<input type="text" size="60" class="site" id="q3" placeholder="将链接复制进来">
@@ -82,7 +85,7 @@
 						<span>mip端地址:</span>
 						<input type="text" value="" size="59">
 						
-						<a href="javascript:volid(0);" target="_self" >当前页面访问</a>
+						<a href="javascript:volid(0);" target="_self" class="ddd" >当前页面访问</a>
 						
 						
 					</div>
@@ -96,7 +99,7 @@
 					<div class="PPc">
 						<span>pc端:</span>
 						<input type="text" value="" size="60">
-						<a href="" target="_blank">
+						<a href="javascript:volid(0)" target="_blank">
 							新页面访问
 						</a>
 					</div>
@@ -110,21 +113,23 @@
 						<span>mip端地址:</span>
 						<input type="text" value="" size="59">
 						
-						<a href="javascript:volid(0);" target="_self">当前页面访问</a>
+						<a href="javascript:volid(0);" target="_self" class="ddd">当前页面访问</a>
 					</div>
 					
 				</div>
-				<div class="ps"><span>1.访问是清除缓存，把内容更新到服务器上</span><br/>
-				<span>2.本地想要访问更新修改后的内容，将.html后缀去掉，回车，并按Ctrl+F5强制刷新页面</span>
+				<div class="ps"><span>1.访问是清除缓存</span><br/>
+				<span>2.本地想要访问更新修改后的内容，将.html后缀去掉，按回车键，并按Ctrl+F5强制刷新页面</span>
 				<br/>
-				<span>3.刚修改过一次，然后再次修改需要4分钟后才能看到修改后的内容
-</span></div>
+				</div>
 			</body>
 			<script src="lib/jquery-1.12.4.js"></script>
 			<script>
 			$(function() {
 			// 前端链接=========================================================
 			$("#q2").focus();
+			$(".ddd").click(function() {
+				$("#q1").trigger('click');
+			});
 			$("#q1").click(function() {
 				// 定义生成三个端站点
 				var a = $("input").val()
