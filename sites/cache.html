@@ -68,7 +68,7 @@
 					<div class="Pc">
 						<span>pc端:</span>
 						<input type="text" value="" size="60">
-						<a href="" target="_blank" >
+						<a href="javascript:volid(0);" target="_blank">
 							新页面访问
 						</a>
 					</div>
@@ -146,7 +146,7 @@
 			var MSite = endsite.replace(/www/g, 'm')
 			var MipSite = endsite.replace(/www/g, 'mip')
 				//为超链接赋href的url值
-				$("Pc a").attr('href', endsite);
+				$(".Pc a").attr('href', endsite);
 				$(".M a").attr('href', MSite);
 				$(".Mip a").attr('href', MipSite);
 				//将三个端站点值传入三个输入框显示
