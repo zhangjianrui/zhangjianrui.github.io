@@ -43,145 +43,149 @@
 			<div class="pc">
 				<span>pc端:</span>
 				<input type="text" value="" size="60">
-				<a href="javascript:volid(0);" target="_blank" accesskey="2">
+				<a href="javascript:volid(0);" target="_blank" accesskey="2" class="d1">
 					新页面访问(按Alt+2 访问)
-					</a>
-					<div class="m">
-						<span>m端地址:</span>
-						<input type="text" value="" size="60">
-						
-						
-						<a href="javascript:volid(0);" target="_self" accesskey="3">当前页面访问(按Alt+3 访问)</a>
-					</div>
-					<div class="mip">
-						<span>mip端地址:</span>
-						<input type="text" value="" size="59">
-						
-						<a href="javascript:volid(0);" target="_self" accesskey="4" class="ddd">当前页面访问(按Alt+4 访问)</a>
-					</div>
+				</a>
+				<div class="m">
+					<span>m端地址:</span>
+					<input type="text" value="" size="60">
 					
+					
+					<a href="javascript:volid(0);" target="_self" accesskey="3" class="d1">当前页面访问(按Alt+3 访问)</a>
 				</div>
-		
-
-
-				<div class="main">
-					<span>正式站链接:</span>
-					<input type="text" size="60" class="site" id="q3" placeholder="将链接复制进来">
-					<input type="button" value="生成地址" id="q4">
-					<div class="Pc">
-						<span>pc端:</span>
-						<input type="text" value="" size="60">
-						<a href="javascript:volid(0);" target="_blank">
-							新页面访问
-						</a>
-					</div>
-					<div class="M">
-						<span>m端地址:</span>
-						<input type="text" value="" size="60">
-						
-						<a href="javascript:volid(0);" target="_self" >当前页面访问</a>
-					</div>
-					<div class="Mip">
-						<span>mip端地址:</span>
-						<input type="text" value="" size="59">
-						
-						<a href="javascript:volid(0);" target="_self" class="ddd" >当前页面访问</a>
-						
-						
-					</div>
+				<div class="mip">
+					<span>mip端地址:</span>
+					<input type="text" value="" size="59">
+					
+					<a href="javascript:volid(0);" target="_self" accesskey="4" class="d1">当前页面访问(按Alt+4 访问)</a>
+				</div>
+				
+			</div>
+			
+			<div class="main">
+				<span>正式站链接:</span>
+				<input type="text" size="60" class="site" id="q3" placeholder="将链接复制进来">
+				<input type="button" value="生成地址" id="q4">
+				<div class="Pc">
+					<span>pc端:</span>
+					<input type="text" value="" size="60" class="d2">
+					<a href="javascript:volid(0);" target="_blank" class="d2">
+						新页面访问
+					</a>
+				</div>
+				<div class="M">
+					<span>m端地址:</span>
+					<input type="text" value="" size="60">
+					
+					<a href="javascript:volid(0);" target="_self" class="d2">当前页面访问</a>
+				</div>
+				<div class="Mip">
+					<span>mip端地址:</span>
+					<input type="text" value="" size="59">
+					
+					<a href="javascript:volid(0);" target="_self" class="d2">当前页面访问</a>
+					
 					
 				</div>
 				
-				<div class="main">
-					<span>测试站链接:</span>
-					<input type="text" size="60" class="site" id="q5" placeholder="将链接复制进来">
-					<input type="button" value="生成地址" id="q6" >
-					<div class="PPc">
-						<span>pc端:</span>
-						<input type="text" value="" size="60">
-						<a href="javascript:volid(0)" target="_blank">
-							新页面访问
-						</a>
-					</div>
-					<div class="MM">
-						<span>m端地址:</span>
-						<input type="text" value="" size="60">
-						
-						<a href="javascript:volid(0);" target="_self">当前页面访问</a>
-					</div>
-					<div class="MMip">
-						<span>mip端地址:</span>
-						<input type="text" value="" size="59">
-						
-						<a href="javascript:volid(0);" target="_self" class="ddd">当前页面访问</a>
-					</div>
+			</div>
+			
+			<div class="main">
+				<span>测试站链接:</span>
+				<input type="text" size="60" class="site" id="q5" placeholder="将链接复制进来">
+				<input type="button" value="生成地址" id="q6" >
+				<div class="PPc">
+					<span>pc端:</span>
+					<input type="text" value="" size="60">
+					<a href="javascript:volid(0)" target="_blank" class="d3">
+						新页面访问
+					</a>
+				</div>
+				<div class="MM">
+					<span>m端地址:</span>
+					<input type="text" value="" size="60">
 					
+					<a href="javascript:volid(0);" target="_self" class="d3">当前页面访问</a>
 				</div>
-				<div class="ps"><span>1.访问是清除缓存</span><br/>
-				<span>2.本地想要访问更新修改后的内容，将.html后缀去掉，按回车键，并按Ctrl+F5强制刷新页面</span>
-				<br/>
+				<div class="MMip">
+					<span>mip端地址:</span>
+					<input type="text" value="" size="59">
+					
+					<a href="javascript:volid(0);" target="_self" class="d3">当前页面访问</a>
 				</div>
-			</body>
-			<script src="lib/jquery-1.12.4.js"></script>
-			<script>
-			$(function() {
-			// 前端链接=========================================================
-			$("#q2").focus();
-			$(".ddd").click(function() {
-				$("#q1").trigger('click');
-			});
-			$("#q1").click(function() {
-				// 定义生成三个端站点
-				var a = $("input").val()
-				var pcSite = a + '.html';
-				var mSite = pcSite.replace(/www/g, 'm')
-				var mipSite = pcSite.replace(/www/g, 'mip')
-				//为超链接赋href的url值
-				$("a").attr('href', pcSite);
-				$(".m a").attr('href', mSite);
-				$(".mip a").attr('href', mipSite);
-				//将三个端站点值传入三个输入框显示
-				$(".pc input").val(pcSite)
-				$(".m input").val(mSite)
-				$(".mip input").val(mipSite)
-			});
-			// 正式站链接==========================================================
-				$("#q4").click(function() {
-				var str=$("#q3").val()
-			// 截取url字符串后38位，并把其替换为.html，同时定义三个端的url值
-			url=str.length
-			endsite=str.replace(str.substr(url-38,url+1),".html");
-			var MSite = endsite.replace(/www/g, 'm')
-			var MipSite = endsite.replace(/www/g, 'mip')
-				//为超链接赋href的url值
-				$(".Pc a").attr('href', endsite);
-				$(".M a").attr('href', MSite);
-				$(".Mip a").attr('href', MipSite);
-				//将三个端站点值传入三个输入框显示
-				$(".Pc input").val(endsite)
-				$(".M input").val(MSite)
-				$(".Mip input").val(MipSite)
-			
-			});
-			// 测试站链接=========================================================
-			$("#q6").click(function() {
-				var str=$("#q5").val()
-			// 截取url字符串后38位，并把其替换为.html，同时定义三个端的url值
-			var url=str.length
-			var endsite=str.replace(str.substr(url-38,url+1),".html")
-			var PPcsite=endsite.replace(/former-www/g, 'www')
-			var MSite = endsite.replace(/former-www/g, 'm')
-			var MipSite = endsite.replace(/former-www/g, 'mip')
-				//为超链接赋href的url值
-				$(".PPc a").attr('href', PPcsite);
-				$(".MM a").attr('href', MSite);
-				$(".MMip a").attr('href', MipSite);
-				//将三个端站点值传入三个输入框显示
-				$(".PPc input").val(PPcsite)
-				$(".MM input").val(MSite)
-				$(".MMip input").val(MipSite)
-			
-			});
-			})
-			</script>
-		</html>
+				
+			</div>
+			<div class="ps"><span>1.访问是清除缓存</span><br/>
+			<span>2.本地想要访问更新修改后的内容，将.html后缀去掉，按回车键，并按Ctrl+F5强制刷新页面</span>
+			<br/>
+		</div>
+	</body>
+	<script src="lib/jquery-1.12.4.js"></script>
+	<script>
+	$(function() {
+	// 前端链接=========================================================
+	$("#q2").focus();
+	$(".d1").click(function() {
+		$("#q1").trigger('click');
+	});
+	$(".d2").click(function() {
+		$("#q4").trigger('click');
+	});
+	$(".d3").click(function() {
+		$("#q6").trigger('click');
+	});
+	$("#q1").click(function() {
+		// 定义生成三个端站点
+		var a = $("input").val()
+		var pcSite = a + '.html';
+		var mSite = pcSite.replace(/www/g, 'm')
+		var mipSite = pcSite.replace(/www/g, 'mip')
+		//为超链接赋href的url值
+		$("a").attr('href', pcSite);
+		$(".m a").attr('href', mSite);
+		$(".mip a").attr('href', mipSite);
+		//将三个端站点值传入三个输入框显示
+		$(".pc input").val(pcSite)
+		$(".m input").val(mSite)
+		$(".mip input").val(mipSite)
+	});
+	// 正式站链接==========================================================
+		$("#q4").click(function() {
+		var str=$("#q3").val()
+	// 截取url字符串后38位，并把其替换为.html，同时定义三个端的url值
+	url=str.length
+	endsite=str.replace(str.substr(url-38,url+1),".html");
+	var MSite = endsite.replace(/www/g, 'm')
+	var MipSite = endsite.replace(/www/g, 'mip')
+		//为超链接赋href的url值
+		$(".Pc a").attr('href', endsite);
+		$(".M a").attr('href', MSite);
+		$(".Mip a").attr('href', MipSite);
+		//将三个端站点值传入三个输入框显示
+		$(".Pc input").val(endsite)
+		$(".M input").val(MSite)
+		$(".Mip input").val(MipSite)
+	
+	});
+	// 测试站链接=========================================================
+	$("#q6").click(function() {
+		var str=$("#q5").val()
+	// 截取url字符串后38位，并把其替换为.html，同时定义三个端的url值
+	var url=str.length
+	var endsite=str.replace(str.substr(url-38,url+1),".html")
+	var PPcsite=endsite.replace(/former-www/g, 'www')
+	var MSite = endsite.replace(/former-www/g, 'm')
+	var MipSite = endsite.replace(/former-www/g, 'mip')
+		//为超链接赋href的url值
+		$(".PPc a").attr('href', PPcsite);
+		$(".MM a").attr('href', MSite);
+		$(".MMip a").attr('href', MipSite);
+		//将三个端站点值传入三个输入框显示
+		$(".PPc input").val(PPcsite)
+		$(".MM input").val(MSite)
+		$(".MMip input").val(MipSite)
+	
+	});
+	})
+	</script>
+</html>
