@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>开关控制（js是否支持链式写法）</title>
+	<style>
+		.q1{
+			width: 100px;
+			height: 100px;
+			background-color:red;
+			
+		}
+	</style>
+	<script>
+	function dianji(){
+		var a=document.getElementById('q2');
+
+	
+
+		if(a.style.display=='block')
+		{
+			a.style.display='none';
+		}
+		else{
+			a.style.display='block';
+		}
+	}
+</script>
+</head>
+<body>
+<input type="button" onclick="dianji();" value="点击隐藏/显示"> 
+	<div class="q1" id="q2"></div>
+	
+	<p>本例的主要js代码如下</p>
+	<pre>
+var a=document.getElementById('q2');
+if(a.style.display=='block')
+{
+a.style.display='none';
+}
+else{
+a.style.display='block';
+}
+	</pre>
+<p>如果将a.style.display定义为一个变量，则需要注意=/==符号的使用</p>
+<p>不支持链式写法如，<pre>var a=document.getElementById('q2').style.display</pre></p>
+
+</body>
+
+</html>

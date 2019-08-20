@@ -1,29 +1,36 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>test.html</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.box1{
+	width: 100px;
+	height: 100px;
+	background-color:red;
+	float: left;
+}
 
+.q2{
+	background-color: yellow;
+	width: 400px;
+	height: 400px;
+}</style>
 </head>
 <body>
-姓名<br>
-<input type="text" id="q1">
-<input type="button" value="触发" id="q2">
+<span>
+	div前的span元素
+</span><div class="box1">这是div</div>
+	div后的无标签普通文字
+<p>
+	解释，真正的脱离标准流的元素，是能覆盖住所有的元素的，而在这里浮动的div：
+	1.不能覆盖行内元素以及行内框文字
+	2.可以覆盖块级元素（黄色div）
+	
+	因此，说明是半脱离标准流状态（字围效果的原因）
+</p>
 
-<input type="button" value="提交"><!-- onclick代表单击以后会触发的事件 -->
+<div class="q2"></div>
 
-<a href="1.html" target="_self">123</a>
-<input type="text" id="q3">
 </body>
-<!-- <script src="lib/jquery-1.12.4.js"></script> -->
-<script>
-var str = "https://www.chinapp.com/pinpaidongtai/185748?show=73a2fcc2efb5209c7989d4386cfb44d9";
-
-a=str.length
-c=str.replace(str.substr(a-38,a+1),".html");
-alert(c)
-
-// b=str.substr(a-38,a+1)
-// c=str.replace(b,".html");
-// alert(c)
-</script>
 </html>
-

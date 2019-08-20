@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>方灯开关(通过切换标签的class改变样式)通过切换标签的class改变样式</title>
+	<style>
+		.q1{
+			width: 100px;
+			height: 100px;
+			border:1px solid black;
+		}
+		.bh{
+			background-color: red;
+			width: 100px;
+			height: 100px;
+			border:1px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	<input type="button" value="开/关电灯" onclick="kaiguan()">
+	<div class="q1" id="q2">
+		
+	</div>
+	<p>js代码如下</p>
+<p>
+	<pre>
+		function kaiguan(){
+		var a=document.getElementById('q2');
+		if(a.className=="q1"){
+			a.className="bh"
+		}
+		else{
+			a.className="q1"
+		}
+
+	}
+	</pre>
+</p>
+	<script>
+	function kaiguan(){
+		var a=document.getElementById('q2');
+		if(a.className=="q1"){
+			a.className="bh"
+		}
+		else{
+			a.className="q1"
+		}
+
+	}
+	</script>
+</body>
+</html>
