@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+	</style>
+</head>
+<body>
+	<div id="q1" onclick="aa();"></div>
+<p>点击改变颜色</p>
+<p>
+	.和[]的写法
+</p>
+<pre>
+	function aa(){
+//var a=document.getElementById("q1")
+var a=document['getElementById']("q1");
+// a.style.backgroundColor="blue";
+a['style']['backgroundColor']="blue";
+}</pre>
+<script>
+function aa(){
+//var a=document.getElementById("q1")	
+var a=document['getElementById']("q1");
+
+// a.style.backgroundColor="blue";
+a['style']['backgroundColor']="blue";
+
+}
+	
+
+	
+
+</script>
+</body>
+</html>

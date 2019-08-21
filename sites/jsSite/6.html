@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<input type="button" value="变宽" onclick="set('400');">
+
+
+<img src="../img/1.jpg" height="91" width="160" alt="" id="q2">
+<p>对象.属性和对象[]的区别</p>
+<p>
+	<pre>
+function set(num){
+var img=document.getElementById("q2");
+//img.width=num;//方法1
+img['width']=num;//方法2
+
+}
+			
+	</pre>
+</p>
+	<script>
+			function set(num){
+				var img=document.getElementById("q2");
+					
+
+				img.width=num;	
+				 //img['width']=num;
+				
+			}
+			
+
+	</script>
+</body>
+</html>

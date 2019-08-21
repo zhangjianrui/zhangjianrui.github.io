@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color:pink;
+		}
+	</style>
+</head>
+<body>
+<input type="button" value="红" onclick="bianSe('red');">
+<input type="button" value="黄"onclick="bianSe('yellow');">
+<input type="button" value="蓝"onclick="bianSe('blue');">
+<div id="q1"></div> 
+<p>利用传参函数写的换肤效果</p>
+<p>代码如下</p>
+<pre>
+function bianSe(color){  //color为参数
+var div=document.getElementById("q1");
+div.style.backgroundColor=color;
+}
+			</pre>
+
+
+
+	<script>
+			function bianSe(color){
+				var div=document.getElementById("q1");
+				div.style.backgroundColor=color;
+			}
+			
+
+	</script>
+</body>
+</html>

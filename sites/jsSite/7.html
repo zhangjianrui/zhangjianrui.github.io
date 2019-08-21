@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			background-color: red;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<pre>
+function setStyle(name,value){
+var oDiv=document.getElementById("q1");
+oDiv.style[name]=value;
+}
+</pre>
+	</p>
+	<input type="button" value="变宽" onclick="setStyle('width','400px')">
+	<input type="button" value="变高" onclick="setStyle('height','400px')">
+	<input type="button" value="变色" onclick="setStyle('background','blue')">
+	<div id="q1"></div>
+
+
+	<script>
+		function setStyle(name,value){
+			var oDiv=document.getElementById("q1");
+			oDiv.style[name]=value;
+		}
+
+
+	</script>
+</body>
+</html>
