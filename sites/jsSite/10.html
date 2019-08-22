@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>提取行间事件</title>
+</head>
+<body>
+	<input type="button" value="我要弹框" id="q1">
+	<p>本例中的点击事件不是在html行间写的，</p>
+	<p>	html结构如下</p>
+
+	<pre>input type="button" value="我要弹框" id="q1"</pre>
+	<p>js代码如下</p>
+	<pre>	var input=document.getElementById("q1");
+	var a=function(){
+		alert("弹框")
+	}
+	input.onclick=a;</pre>
+	<h1>onclick（事件）也是属性!只不过该属性的值是一个函数</h1>
+	<script>
+	var input=document.getElementById("q1");
+	var a=function(){
+		alert("弹框")}
+	input.onclick=a;
+	</script>
+</body>
+</html>

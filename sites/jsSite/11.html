@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>js的执行顺序</title>
+	<script>
+window.onload=function (){
+
+	var input=document.getElementById("q1");
+input.onclick=function (){
+		alert("message")
+	}
+
+
+}
+</script>
+</head>
+<body>
+	<input type="button" id="q1">
+	<p>js执行顺序是从上之下（按页面文档顺序），走一行，执行一行</p>
+	<p>若script标签不要写在html前面，js会获取不到dom对象而执行不了js代码</p>
+	<h1>解决方法：</h1>
+	<p>1.页面文档最后面写js代码</p>
+	<p>2.把代码写入页面预加载函数中,如<br/>
+	<pre>	
+window.onload=function (){
+var input=document.getElementById("q1");
+input.onclick=function (){
+alert("message")
+}
+}
+</pre></p>
+</body>
+
+</html>

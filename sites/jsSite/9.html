@@ -2,31 +2,39 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>style和className的区别</title>
 	<style>
-		.q1{
-			background-color: red;
-			width: 100px;
-			height: 100px;
-
+		div{
+			width: 200px;
+			height: 200px;
+			border:1px solid black;
 		}
-		.q2{
-			background-color:pink;
-			width: 100px;
-			height: 100px;
+		.box{
+			background-color: red;
 		}
 	</style>
 </head>
 <body>
-	<div class="q1" id="q3">
-		
-	</div>
-	<input type="button" value="qiehuan" onclick="qiehuan();">
+	<input type="button" value="变红" onclick="tored();">
+	<input type="button" value="变蓝" onclick="toblue();">
+	<div class="q1" id="q2"></div>
+	<p>通过 对象.style 方法设置的样式是行间样式</p>
+	<p>通过 className 方法设置的样式是引入claas类样式</p>
+	<p>本例中，变红用了claas类样式，变蓝用了对象.style 方法</p>
+	<p>若1.先点击变蓝，设置了行间样式（蓝色）2.再点击变红，设置了内嵌样式（红色），因此，论css优先级，蓝色生效，红色不生效</p>
+
+		<h1>建议！操作同一个对象的时候，要么全用class法，要么全用style法，混在一起用，会产生css优先级问题！</h1>
 	<script>
-		function qiehuan(){
-			var a=document.getElementById("q3")
-			a.className="q2";
-		}
+	function tored(){
+		var div=document.getElementById("q2");
+		div.className="box";
+	}
+	function toblue(){
+		var div=document.getElementById("q2");
+		div.style.background="blue";
+	}
+
+
 	</script>
 </body>
 </html>
